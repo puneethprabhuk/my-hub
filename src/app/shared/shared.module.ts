@@ -4,6 +4,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MatIconModule } from '@angular/material/icon';
 
+import { RouterModule } from '@angular/router'
+
 
 
 @NgModule({
@@ -13,7 +15,8 @@ import { MatIconModule } from '@angular/material/icon';
   ],
   imports: [
     CommonModule,
-    MatIconModule
+    MatIconModule,
+    RouterModule
   ],
   exports: [
     NavbarComponent,

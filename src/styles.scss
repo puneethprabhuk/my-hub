@@ -6,15 +6,30 @@
     box-sizing: border-box;
 }
 
+html,
+body {
+    height: 100%;
+}
+
 body {
     font-family: 'Poppins', sans-serif !important;
-    height: 100vh;
 }
 
 // Variables 
 $primary-color: #573D71;
-$secondary-color: #FFBAA3;
+$secondary-color: #FC9171;
 $grey-color: #F9FAFE;
+$grey-text: #818184;
+$red: #eb5b3c;
+$green: #00d09c;
+
+.text-grey {
+    color: $grey-text;
+}
+
+.text-small {
+    font-size: .9rem;
+}
 
 .main-container {
     background-color: #fff;
@@ -24,6 +39,7 @@ $grey-color: #F9FAFE;
     width: 99%;
     height: 98%;
     background-color: $grey-color;
+    border-radius: 0 20px 20px 0;
 }
 
 .navbar-container {
@@ -34,6 +50,29 @@ $grey-color: #F9FAFE;
     flex: 22;
 }
 
+.primary-button {
+    background-color: $secondary-color !important;
+    color: #fff !important;
+}
+
+.rounded-button {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 40px !important;
+    width: 40px !important;
+    max-width: 40px !important;
+    max-height: 40px !important;
+    min-height: 40px !important;
+    min-width: 40px !important;
+    border-radius: 50% !important;
+    padding: 0 !important;
+
+    mat-icon {
+        margin: 0 !important;
+    }
+}
+
 // Navbar
 
 .navbar {
@@ -41,6 +80,7 @@ $grey-color: #F9FAFE;
     border-radius: 20px 0 0 20px;
     width: 100%;
     display: block !important;
+
     &-menu {
         .menu-link {
             color: $grey-color;
@@ -54,11 +94,106 @@ $grey-color: #F9FAFE;
 
 .header {
     height: 70px;
-    background-color: blue;
+
+    .profile {
+        width: 50px;
+        height: 50px;
+        background-color: rgb(197, 90, 108);
+        border-radius: 50%;
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: #fff;
+    }
 }
 
 
 
+section.section {
+    height: calc(100% - 70px);
+    padding-bottom: .5rem;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.expense-tracker-view {
+    height: 100%;
+}
+
+.balance-details-pane {
+    flex: 1;
+
+    .balance-details {
+        // border: 2px solid rgb(233, 231, 231);
+        box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.1);
+        height: 200px;
+        width: 92%;
+        border-radius: 10px;
+    }
+}
+
+.expenses-pane {
+    box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    height: 100%;
+    overflow: hidden;
+    flex: 1;
+}
+
+.expenses-pane {
+    .pane-header {
+        flex: 1;
+    }
+
+    .pane-body {
+        flex: 10;
+        // height: 100%;
+        overflow-y: auto;
+
+    }
+}
+
+.transaction-card {
+    margin: 0 1rem;
+    box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 1s ease-in-out;
+    position: relative;
+    .transaction-card-overlay {
+        transition: all .2s ease-in;
+        opacity: 0;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 10;
+        background-color: rgba(0, 0, 0, .6);
+        backdrop-filter: saturate(180%) blur(1.5px);
+        border-radius: 10px;
+        .edit-button,
+        .delete-button {
+            color: #fff !important;
+        }
+    }
+    &:hover .transaction-card-overlay{
+        opacity: 1;
+    }
+}
+
+.amount-credit {
+    color: $green;
+}
+
+.amount-debit {
+    color: $red
+}
+
+
+.scrollbar::-webkit-scrollbar {
+    width: 5px;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgb(251, 251, 251);
+    background-color: $primary-color;
+}
