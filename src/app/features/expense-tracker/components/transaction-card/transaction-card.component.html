@@ -14,8 +14,9 @@
         <div class="text-grey text-tiny mb-1 transaction-description">Lorem ipsum dolor sit amet</div>
         <div class="text-grey text-small">5 Jan 2023</div>
     </div>
-    <div class="amount-credit d-flex flex-column justify-content-center align-items-end">
-        <h5 class="m-0">
+    <div class="d-flex flex-column justify-content-center align-items-end">
+        <h5 class="m-0" [ngClass]="paneType === 'expenses' ? 'amount-debit' : 'amount-credit'">
+            <span *ngIf="paneType === 'expenses'">-</span>
             <i class="fa-solid fa-indian-rupee-sign"></i>
             2000.00
         </h5>

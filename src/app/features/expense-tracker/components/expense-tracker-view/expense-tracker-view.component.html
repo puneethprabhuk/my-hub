@@ -1,11 +1,14 @@
 <div class="expense-tracker-view d-flex align-items-center justify-content-center">
-    <div class="h-100" style="flex: 1;">
-        <app-expense-pane></app-expense-pane>
+    <div class="h-100 income-pane" style="flex: 1;">
+        <app-expense-pane [paneType]="incomes"></app-expense-pane>
     </div>
     <div class="balance-details-pane">
         <app-balance-card></app-balance-card>
     </div>
-    <div class="h-100" style="flex: 1;">
-        <app-expense-pane></app-expense-pane>
+    <div class="expense-toggler-pane my-3 w-100">
+        <app-expense-toggler></app-expense-toggler>
+    </div>
+    <div class="h-100 expense-pane" style="flex: 1;">
+        <app-expense-pane [paneType]="expenses"></app-expense-pane>
     </div>
 </div>

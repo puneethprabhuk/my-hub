@@ -104,22 +104,22 @@ textarea {
             cursor: pointer;
         }
     }
+    .profile {
+        width: 50px;
+        height: 50px;
+        background-color: $secondary-color;
+        border-radius: 50%;
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: #fff;
+        cursor: pointer;
+    }
 }
 
 // Header
 
 .header {
     height: 70px;
-
-    .profile {
-        width: 50px;
-        height: 50px;
-        background-color: rgb(197, 90, 108);
-        border-radius: 50%;
-        font-size: 1.1rem;
-        font-weight: 500;
-        color: #fff;
-    }
 }
 
 
@@ -230,5 +230,69 @@ section.section {
             width: 100%;
             resize: none;
         }
+    }
+}
+
+.expense-toggler-pane {
+    display: none;
+}
+
+.expense-toggler {
+    box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    .toggle-income {
+        border-radius: 10px 0 0 10px;
+    }
+    .toggle-expense {
+        border-radius: 0 10px 10px 0;
+    }
+}
+
+.expense-toggle-selected {
+    background-color: $primary-color;
+    color: #fff;
+}
+
+
+
+// Responsive
+
+@media screen and (max-width: 576px) {
+    .expense-toggler-pane {
+        display: block;
+    }
+    .expense-toggler {
+        display: block;
+    }
+    .navbar-container {
+        display: none;
+    }
+    section.section {
+        padding: 0 .8rem !important;
+    }
+    .expense-tracker-view {
+        flex-direction: column;
+        .balance-details-pane {
+            order: 1;
+            width: 100%;
+            flex: none;
+            .balance-details {
+                width: 100%;
+            }
+        }
+        .expense-toggler-pane {
+            order: 2;
+        }
+        .income-pane {
+            order: 3;
+            width: 100%;
+            h5 {
+                font-size: .9rem !important;
+            }
+        }
+
+        .expense-pane {
+            display: none;
+        } 
     }
 }

@@ -1,7 +1,8 @@
 <div class="expenses-pane pb-3 d-flex flex-column">
     <div class="pane-header d-flex align-items-center justify-content-between px-3"
         style="background-color: #573D71; color: #fff;">
-        <h5 class="m-0">Incomes</h5>
+        <h5 class="m-0" *ngIf="paneType === 'incomes'">Incomes</h5>
+        <h5 class="m-0" *ngIf="paneType === 'expenses'">Expenses</h5>
         <div class="d-flex align-items-center">
             <button mat-icon-button style="margin-right: .5rem;">
                 <mat-icon class="text-grey" style="color: #fff;">sort</mat-icon>
@@ -19,8 +20,8 @@
             style="margin-right: 1rem; margin-left: 1rem;"></app-expense-tracker-add>
     </div> -->
     <div class="pane-body scrollbar">
-        <app-transaction-card></app-transaction-card>
-        <app-transaction-card></app-transaction-card>
-        <app-transaction-card></app-transaction-card>
+        <app-transaction-card [paneType]="paneType"></app-transaction-card>
+        <app-transaction-card [paneType]="paneType"></app-transaction-card>
+        <app-transaction-card [paneType]="paneType"></app-transaction-card>
     </div>
 </div>

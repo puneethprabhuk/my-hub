@@ -5,6 +5,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { MatIconModule } from '@angular/material/icon';
 
 import { RouterModule } from '@angular/router'
+import { MatButtonModule } from '@angular/material/button';
 
 
 
@@ -16,7 +17,9 @@ import { RouterModule } from '@angular/router'
   imports: [
     CommonModule,
     MatIconModule,
-    RouterModule
+    RouterModule,
+    MatButtonModule,
+    MatIconModule
   ],
   exports: [
     NavbarComponent,

@@ -1,22 +1,32 @@
-<div class="navbar h-100 w-100">
-    <div class="navbar-menu h-100 d-flex align-items-center justify-content-center flex-column">
-        <a class="menu-link mb-5">
-            <mat-icon fontIcon="home"></mat-icon>
-        </a>
-        <a class="menu-link mb-5">
-            <mat-icon fontIcon="person"></mat-icon>
-        </a>
-        <a class="menu-link mb-5">
-            <mat-icon fontIcon="timer"></mat-icon>
-        </a>
-        <a class="menu-link mb-5" routerLink="expense-tracker">
-            <mat-icon fontIcon="attach_money"></mat-icon>
-        </a>
-        <a class="menu-link mb-5">
-            <mat-icon fontIcon="settings"></mat-icon>
-        </a>
-        <a class="menu-link mb-5">
-            <mat-icon fontIcon="exit_to_app"></mat-icon>
-        </a>
+<div class="navbar h-100 w-100 d-flex flex-column justify-content-between py-3">
+    <div class="logo">
+        <div class="profile d-flex align-items-center justify-content-center">
+            Logo
+        </div>
+    </div>
+    <div class="navbar-menu d-flex align-items-center justify-content-center flex-column">
+        <button mat-icon-button class="menu-link mb-4">
+            <mat-icon class="text-grey" style="color: #fff;">home</mat-icon>
+        </button>
+        <button mat-icon-button class="menu-link mb-4">
+            <mat-icon class="text-grey" style="color: #fff;">person</mat-icon>
+        </button>
+        <button mat-icon-button class="menu-link mb-4">
+            <mat-icon class="text-grey" style="color: #fff;">timer</mat-icon>
+        </button>
+        <button mat-icon-button class="menu-link mb-4">
+            <mat-icon class="text-grey" style="color: #fff;">attach_money</mat-icon>
+        </button>
+        <button mat-icon-button class="menu-link mb-4">
+            <mat-icon class="text-grey" style="color: #fff;">settings</mat-icon>
+        </button>
+        <button mat-icon-button class="menu-link mb-4">
+            <mat-icon class="text-grey" style="color: #fff;">exit_to_app</mat-icon>
+        </button>
+    </div>
+    <div class="logged-in-user">
+        <div class="profile d-flex align-items-center justify-content-center">
+            PK
+        </div>
     </div>
 </div>

@@ -1,0 +1,8 @@
+<div class="expense-toggler d-flex align-items-center justify-content-between w-100">
+    <div class="toggle-income text-center p-2" style="flex: 1;" [ngClass]="incomeSelected ? 'expense-toggle-selected' : ''" (click)="selectIncome()">
+        <h5 class="m-0">Income</h5>
+    </div>
+    <div class="toggle-expense text-center p-2" style="flex: 1;" [ngClass]="!incomeSelected ? 'expense-toggle-selected' : ''" (click)="selectExpense()">
+        <h5 class="m-0">Expense</h5>
+    </div>
+</div>

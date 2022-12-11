@@ -6,19 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./expense-tracker-view.component.scss']
 })
 export class ExpenseTrackerViewComponent {
-
-  addIncomeMode: boolean = false;
-
-  onAddIncome(): void {
-    this.addIncomeMode = true;
-  }
-
-  onCancelAddIncome(): void {
-    this.addIncomeMode = false;
-  }
-
-  onSaveIncome(): void {
-    this.addIncomeMode = false;
-  }
+  incomes = 'incomes';
+  expenses = 'expenses'
 
 }
