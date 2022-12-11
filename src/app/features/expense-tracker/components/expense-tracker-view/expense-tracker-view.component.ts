@@ -7,4 +7,18 @@ import { Component } from '@angular/core';
 })
 export class ExpenseTrackerViewComponent {
 
+  addIncomeMode: boolean = false;
+
+  onAddIncome(): void {
+    this.addIncomeMode = true;
+  }
+
+  onCancelAddIncome(): void {
+    this.addIncomeMode = false;
+  }
+
+  onSaveIncome(): void {
+    this.addIncomeMode = false;
+  }
+
 }
